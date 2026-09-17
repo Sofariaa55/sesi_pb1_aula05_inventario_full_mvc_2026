@@ -4,9 +4,12 @@ const rotaInicial = (req, res) => {
     res.json("Back-end respondendo")
 }
 
+
 //Configurações do servidor
 const app = express()
+app.use(cors())
 app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
 const porta = 3000
 
 //Rotas
